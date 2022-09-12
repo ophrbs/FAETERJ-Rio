@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade AV1 - Livraria</title>
+</head>
+
+<body style="margin: 0px">
+  <!-- cabeçalho -->
+  <header style="display: flex; justify-content: space-around; background-color: rgb(50, 50, 50); color: white; align-items: center">
+    <h2 style="font-family: 'Rajdhani', sans-serif">Livraria</h2>
+    <nav style="display: flex; gap: 50px; font-family: 'Open Sans', serif;">
+      <a href="#produtos" style="all: unset; cursor: pointer">
+        <p>Produtos</p>
+      </a>
+      <a href="#comprar" style="all: unset; cursor: pointer">
+        <p>Comprar</p>
+      </a>
+    </nav>
+  </header>
+
+  <!-- conteudo principal -->
+  <main style="display: grid; justify-content: center; text-align: center; align-items: center; gap: 30px; font-family: 'Open Sans', sans-serif">
+    <!-- livros -->
+    <article id="produtos">
+      <h1 style="font-family: 'Gelasio', serif">Livros</h1>
+      <!-- livros-imagens -->
+      <section>
+        <div style="display: flex; gap: 30px">
+          <div style="margin: 0px">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/81QrZLLu0GL.jpg" alt="Pachinko" style="width: 200px; height: 300px">
+            <figcaption>Pachinko</figcaption>
+          </div>
+
+          <div>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/81sblL-t2iL.jpg" alt="Declínio de um homem" style="width: 200px; height: 300px">
+            <figcaption>Declínio de um homem</figcaption>
+          </div>
+
+          <div>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/513uBf-qxNL.jpg" alt="Querida konbini" style="width: 200px; height: 300px">
+            <figcaption>Querida konbini</figcaption>
+          </div>
+        </div>
+      </section>
+      <!-- livros-tabela -->
+      <section style="display: flex; flex-direction: column; align-items: center; margin-top: 24px">
+        <table style="border: 2px solid black; width: 500px; text-align: center">
+          <tr style="background-color: rgb(50, 50, 50); color: white">
+            <th>Nome</th>
+            <th>Autor</th>
+            <th>Preço</th>
+          </tr>
+          <tr>
+            <td>Pachinko</td>
+            <td>Min Jin Lee</td>
+            <td>R$74,90</td>
+          </tr>
+          <tr style="background-color: rgb(220, 220, 220)">
+            <td>Declínio de um homem</td>
+            <td>Osamu Dazai</td>
+            <td>R$38,71</td>
+          </tr>
+          <tr>
+            <td>Querida konbini</td>
+            <td>Sayaka Murata</td>
+            <td>R$38,71</td>
+          </tr>
+        </table>
+      </section>
+    </article>
+    <!-- mangás -->
+    <article>
+      <h1 style="font-family: 'Gelasio', serif">Mangás</h1>
+      <!-- mangás-imagens -->
+      <section>
+        <div style="display: flex; gap: 30px">
+          <div style="margin: 0px">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/612Nuwx6MvL.jpg" alt="Rohan at the Louvre" style="width: 200px; height: 300px">
+            <figcaption>Rohan at the Louvre</figcaption>
+          </div>
+
+          <div>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/51hHfyuzIML.jpg" alt="Hunter x Hunter - Vol. 33" style="width: 200px; height: 300px">
+            <figcaption>Hunter x Hunter - Vol. 33</figcaption>
+          </div>
+
+          <div>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/61JqkW3-qFL.jpg" alt="Yotsuba&! - Vol. 1" style="width: 200px; height: 300px">
+            <figcaption>Yotsuba&! - Vol. 1</figcaption>
+          </div>
+        </div>
+      </section>
+      <!-- mangás-tabela -->
+      <section style="display: flex; flex-direction: column; align-items: center; margin-top: 24px">
+        <table style="border: 2px solid black; width: 500px; text-align: center">
+          <tr style="background-color: rgb(50, 50, 50); color: white">
+            <th>Nome</th>
+            <th>Autor</th>
+            <th>Preço</th>
+          </tr>
+          <tr>
+            <td>Rohan at the Louvre</td>
+            <td>Hirohiko Araki</td>
+            <td>R$249,29</td>
+          </tr>
+          <tr style="background-color: rgb(220, 220, 220)">
+            <td>Hunter x Hunter - Vol. 33</td>
+            <td>Yoshihiro Togashi</td>
+            <td>R$23,90</td>
+          </tr>
+          <tr>
+            <td>Yotsuba&! - Vol. 1</td>
+            <td>Kiyohiko Azuma</td>
+            <td>R$164,95</td>
+          </tr>
+        </table>
+      </section>
+    </article>
+
+    <!-- formulário -->
+    <article id="comprar">
+      <h1 style="font-family: 'Gelasio', serif">Formulário</h1>
+      <form style="text-align: left; display: grid; grid-template-columns: 1fr 1fr 1fr; justify-content: center; padding: 20px; gap: 10px; border-radius: 5px; background-color: rgb(250, 250, 250); box-shadow: 2px 2px 8px rgb(150, 150, 150);">
+        <div style="justify-self: flex-start">
+          <label for="nome" style="display: block">Nome</label>
+          <input type="text" name="nome" id="nome" required>
+        </div>
+
+        <div style="justify-self: center">
+          <label for="email" style="display: block">Email</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+
+        <div style="justify-self: flex-end">
+          <label for="endereco" style="display: block">Endereço</label>
+          <input type="text" name="endereco" id="endereco" required>
+        </div>
+
+        <div style="grid-column: 1 / 4">
+          <label for="livro" style="display: block">Selecione os livros desejados</label>
+          <div>
+            <div>
+              <input type="checkbox" name="livro" id="pachinko">
+              <label for="pachinko">Pachinko</label>
+            </div>
+            <div>
+              <input type="checkbox" name="livro" id="declinio-de-um-homem">
+              <label for="declinio-de-um-homem">Declínio de um homem</label>
+            </div>
+            <div>
+              <input type="checkbox" name="livro" id="querida-konbini">
+              <label for="querida-konbini">Querida konbini</label>
+            </div>
+          </div>
+        </div>
+
+        <div style="grid-column: 1 / 4">
+          <label for="manga" style="display: block">Selecione os mangás desejados</label>
+
+          <div>
+            <input type="checkbox" name="manga" id="rohan-at-the-louvre">
+            <label for="rohan-at-the-louvre">Rohan at the Louvre</label>
+          </div>
+          <div>
+            <input type="checkbox" name="manga" id="hunter-x-hunter">
+            <label for="hunter-x-hunter">Hunter x Hunter - Vol. 33</label>
+          </div>
+          <div>
+            <input type="checkbox" name="manga" id="yotsubato">
+            <label for="yotsubato">Yotsuba&! - Vol. 1</label>
+          </div>
+
+        </div>
+
+        <button style="cursor: pointer; padding: 10px 20px; background-color: rgb(50, 50, 50); color: white; border-radius: 4px; justify-self: center; grid-column: 2">IR PARA PAGAMENTO</button>
+      </form>
+    </article>
+  </main>
+
+  <!-- rodapé -->
+  <footer style="display: flex; justify-content: center; text-align: center; background-color: rgb(50, 50, 50); color: white; margin-top: 100px; width: 100%; box-sizing: border-box; font-family: 'Open', serif">
+    <p>Trabalho de 2CAW<br>Leandro Herbas © 2022</p>
+  </footer>
+</body>
+
+<!-- fontes -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Gelasio&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+</style>
+
+</html>
