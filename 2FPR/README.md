@@ -12,3 +12,9 @@ Revisão de Fundamentos de Algoritmos de Computação (1FAC)
 
 ### Listas 4 e 5:
 Strings
+
+### Lista 6:
+Matrizes
+
+### Lista 7:
+Structs
