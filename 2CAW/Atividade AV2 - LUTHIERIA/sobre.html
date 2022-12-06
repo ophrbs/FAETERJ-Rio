@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/sobre.css">
+  <link rel="icon" type="img/x-icon" href="./img/favicon.png">
+  <script type="text/javascript" src="./script.js"></script>
+  <title>LUTHIERIA</title>
+</head>
+
+<body>
+  <!-- inicio do cabeçalho de cima -->
+  <header>
+    <h1>LUTHIERIA</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="orcamento.html">Orçamento</a></li>
+      <li><a href="sobre.html">Sobre nós</a></li>
+    </ul>
+  </header>
+  <!-- fim do cabeçalho de cima -->
+
+  <!-- inicio do cabeçalho de baixo -->
+  <nav>
+    <ul>
+      <li><a href="">Todos os produtos</a></li>
+      <li><a href="">Baixo</a></li>
+      <li><a href="">Guitarra</a></li>
+      <li><a href="">Violão</a></li>
+      <li><a href="">Cavaquinho</a></li>
+      <li><a href="">Viola</a></li>
+      <li><a href="">Violino</a></li>
+    </ul>
+  </nav>
+  <!-- fim do cabeçalho de baixo -->
+
+  <!-- inicio do conteudo principal -->
+  <section class="main-content">
+    <!-- inicio do aside -->
+    <aside>
+      <div class="aside-item">
+        <a href=""><img src="./img/aside1.jpg" alt=""></a>
+        <p>Ukulele Madeira de Ocácia</p>
+        <p>R$ 889,90</p>
+      </div>
+      <div class="aside-item">
+        <a href=""><img src="./img/aside2.jpg" alt=""></a>
+        <p>Violão Condor Folk D20</p>
+        <p>R$ 990,90</p>
+      </div>
+      <div class="aside-item">
+        <a href=""><img src="./img/aside3.jpg" alt=""></a>
+        <p>Guitarra Gibson SG Special</p>
+        <p>R$ 1980,00</p>
+      </div>
+    </aside>
+    <!-- fim do aside -->
+
+    <!-- inicio do conteudo *Sobre nós* -->
+    <main class="main-sobre">
+      <h1>Sobre nós</h1>
+
+      <!-- inicio do slide de imagens -->
+      <div class="div-slides">
+        <div class="slides">
+          <input class="input" type="radio" name="slide" id="slide1" checked>
+          <input class="input" type="radio" name="slide" id="slide2">
+          <input class="input" type="radio" name="slide" id="slide3">
+
+          <div class="slide s1">
+            <img src="./img/slide1.jpg" alt="">
+          </div>
+
+          <div class="slide">
+            <img src="./img/slide2.jpg" alt="">
+          </div>
+
+          <div class="slide">
+            <img src="./img/slide3.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- fim do slide de imagens -->
+
+      <p>A <span>LUTHIERIA</span> foi formada em Novembro de 2022, com o desejo de transformar o sonho de todos os
+        musicistas do Brasil, com excelentes profissionais e materiais do mais alto nível, tornando possível a
+        transformação de qualquer projeto do papel para a realidade.</p>
+      <p>Até o atual momento, mais de 130 projetos já foram realizados e nossa equipe está sempre disposta
+        a realizar ainda mais. Faça parte dessa jornada e construa o instrumento musical dos seus sonhos!</p>
+      <div class="imagens-sobre">
+        <img src="./img/sobre1.jpg" alt="">
+        <img src="./img/sobre2.jpg" alt="">
+      </div>
+    </main>
+    <!-- fim do conteudo *Sobre nós* -->
+  </section>
+  <!-- fim do conteudo principal -->
+
+  <!-- inicio do Newsletter -->
+  <section class="newsletter">
+    <div class="newsletter-texto">
+      <h2>Newsletter</h2>
+      <p>Assine e fique por dentro das novidades</p>
+    </div>
+    <form class="newsletter-form" onsubmit="alertaOrcamento()">
+      <input class="newsletter-form-input" type="email" name="newsletter-email" id="newsletter-email" placeholder="exemplo@email.com" required>
+      <input type="submit" value="Assinar" class="newsletter-form-botao">
+    </form>
+  </section>
+  <!-- fim do Newsletter -->
+
+  <!-- inicio do footer -->
+  <footer>
+    <ul class="footer-item">
+      <li><a href="">Sobre nós</a></li>
+      <li><a href="">Fale Conosco</a></li>
+      <li><a href="">Garantia</a></li>
+      <li><a href="">Envio</a></li>
+      <li><a href="">Trocas e Devoluções</a></li>
+    </ul>
+
+    <ul class="footer-item">
+      <li><a href="">Facebook</a></li>
+      <li><a href="">Instagram</a></li>
+      <li><a href="">Twitter</a></li>
+      <li><a href="">Youtube</a></li>
+    </ul>
+
+    <ul class="footer-item">
+      <li>+55 21 999999999 </li>
+      <li>contato@luthieria.com</li>
+      <li>Rua dos Luthiers, 847</li>
+      <li>Rio de Janeiro - RJ</li>
+    </ul>
+  </footer>
+  <!-- fim do footer -->
+</body>
+
+</html>

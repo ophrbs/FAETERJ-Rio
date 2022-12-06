@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/orcamento.css">
+  <link rel="icon" type="img/x-icon" href="./img/favicon.png">
+  <script type="text/javascript" src="./script.js"></script>
+  <title>LUTHIERIA</title>
+</head>
+
+<body>
+  <!-- inicio do cabeçalho de cima -->
+  <header>
+    <h1>LUTHIERIA</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="orcamento.html">Orçamento</a></li>
+      <li><a href="sobre.html">Sobre nós</a></li>
+    </ul>
+  </header>
+  <!-- fim do cabeçalho de cima -->
+
+  <!-- inicio do cabeçalho de baixo -->
+  <nav>
+    <ul>
+      <li><a href="">Todos os produtos</a></li>
+      <li><a href="">Baixo</a></li>
+      <li><a href="">Guitarra</a></li>
+      <li><a href="">Violão</a></li>
+      <li><a href="">Cavaquinho</a></li>
+      <li><a href="">Viola</a></li>
+      <li><a href="">Violino</a></li>
+    </ul>
+  </nav>
+  <!-- inicio do cabeçalho de baixo -->
+
+  <!-- inicio do conteudo principal -->
+  <section class="main-content">
+    <!-- inicio do aside -->
+    <aside>
+      <div class="aside-item">
+        <a href=""><img src="./img/aside1.jpg" alt=""></a>
+        <p>Ukulele Madeira de Ocácia</p>
+        <p>R$ 889,90</p>
+      </div>
+      <div class="aside-item">
+        <a href=""><img src="./img/aside2.jpg" alt=""></a>
+        <p>Violão Condor Folk D20</p>
+        <p>R$ 990,90</p>
+      </div>
+      <div class="aside-item">
+        <a href=""><img src="./img/aside3.jpg" alt=""></a>
+        <p>Guitarra Gibson SG Special</p>
+        <p>R$ 1980,00</p>
+      </div>
+    </aside>
+    <!-- fim do aside -->
+
+    <!-- inicio do conteudo *Orçamento* -->
+    <main class="main-orcamento">
+      <span class="fundo-marrom">
+      </span>
+      <img src="./img/orcamento1.jpg" alt="">
+      <img src="./img/orcamento2.jpg" alt="" class="orcamento-img2">
+      <h1>Orçamento</h1>
+      <article id="orcamento">
+        <form class="form-orcamento" onsubmit="alertaOrcamento()">
+          <div>
+            <label for="nome">Nome</label><br>
+            <input class="orcamento-input" type="text" name="nome" id="nome" required>
+          </div>
+
+          <div>
+            <label for="email">Email</label><br>
+            <input class="orcamento-input" type="email" name="email" id="email" required>
+          </div>
+
+          <div>
+            <label for="phone">Telefone</label><br>
+            <input class="orcamento-input" type="tel" id="phone" name="phone" pattern="[0-9]{2}[0-9]{5}[0-9]{4}" required>
+          </div>
+
+          <div>
+            <label for="instrumentos">Instrumento</label><br>
+            <select id="intrumentos" name="instrumentos" required>
+              <option value="baixo">Baixo</option>
+              <option value="guitarra">Guitarra</option>
+              <option value="violão">Violão</option>
+              <option value="outro">Outro (Diga qual na mensagem)</option>
+            </select>
+          </div>
+
+          <div class="div-mensagem">
+            <label for="mensagem">Mensagem</label><br>
+            <textarea id="mensagem" name="mensagem" rows="8" cols="88" required></textarea>
+          </div>
+
+          <input type="submit" value="ENVIAR" class="botao">
+        </form>
+      </article>
+      <section class="horario-funcionamento">
+        <p>Entraremos em contato em até 5 dias úteis.</p>
+        <p>Horário de funcionamento:</p>
+        <article class="div-horarios">
+          <p>Segunda-Feira:</p>
+          <p>7:00 - 18:00</p>
+          <p>Terça-Feira:</p>
+          <p>7:00 - 18:00</p>
+          <p>Quarta-Feira:</p>
+          <p>7:00 - 18:00</p>
+          <p>Quinta-Feira:</p>
+          <p>7:00 - 18:00</p>
+          <p>Sexta-Feira:</p>
+          <p>8:00 - 16:00 </p>
+          <p>Sábado:</p>
+          <p>8:00 - 16:00 </p>
+        </article>
+        <p>Não trabalhamos aos domingos</p>
+      </section>
+    </main>
+    <!-- fim do conteudo *Orçamento* -->
+  </section>
+  <!-- fim do conteudo principal -->
+
+  <!-- inicio do Newsletter -->
+  <section class="newsletter">
+    <div class="newsletter-texto">
+      <h2>Newsletter</h2>
+      <p>Assine e fique por dentro das novidades</p>
+    </div>
+    <form class="newsletter-form" onsubmit="alertaOrcamento()">
+      <input class="newsletter-form-input" type="email" name="newsletter-email" id="newsletter-email" placeholder="exemplo@email.com" required>
+      <input type="submit" value="Assinar" class="newsletter-form-botao">
+    </form>
+  </section>
+  <!-- fim do Newsletter -->
+
+  <!-- inicio do footer -->
+  <footer>
+    <ul class="footer-item">
+      <li><a href="">Sobre nós</a></li>
+      <li><a href="">Fale Conosco</a></li>
+      <li><a href="">Garantia</a></li>
+      <li><a href="">Envio</a></li>
+      <li><a href="">Trocas e Devoluções</a></li>
+    </ul>
+
+    <ul class="footer-item">
+      <li><a href="">Facebook</a></li>
+      <li><a href="">Instagram</a></li>
+      <li><a href="">Twitter</a></li>
+      <li><a href="">Youtube</a></li>
+    </ul>
+
+    <ul class="footer-item">
+      <li>+55 21 999999999 </li>
+      <li>contato@luthieria.com</li>
+      <li>Rua dos Luthiers, 847</li>
+      <li>Rio de Janeiro - RJ</li>
+    </ul>
+  </footer>
+  <!-- inicio do footer -->
+</body>
+
+</html>

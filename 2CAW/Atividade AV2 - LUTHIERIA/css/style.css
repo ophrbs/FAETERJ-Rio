@@ -1,0 +1,180 @@
+/* CSS Geral */
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+body {
+  margin: 0px;
+  font-family: "Inter", sans-serif;
+  display: grid;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  background-color: #3e1900;
+  padding: 5px;
+}
+
+header h1 {
+  align-self: center;
+}
+
+header ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  align-items: center;
+}
+
+header li {
+  font-size: 1.3rem;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav {
+  background-color: #ad4500;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  list-style: none;
+}
+
+main p {
+  font-size: 1.25rem;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+}
+
+.botao {
+  padding: 15px 30px;
+  background-color: #e05a00;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  align-self: center;
+  justify-self: center;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: #ad4500;
+}
+
+/* Footer e Newsletter */
+footer {
+  background-color: #3e1900;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  margin: 0px;
+}
+
+.newsletter {
+  background-color: #ad4500;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 100px;
+}
+
+.newsletter-texto h2,
+p,
+h1 {
+  margin: 0px;
+}
+
+.newsletter-texto p {
+  max-width: 20ch;
+}
+
+.newsletter-form {
+  margin: 0px;
+  display: flex;
+}
+
+.newsletter-form-input {
+  width: 300px;
+  font-style: italic;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: none;
+  margin: 0px;
+}
+
+.newsletter-form-botao {
+  flex: 1 1 160px;
+  text-transform: uppercase;
+  background-color: #242221;
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 10px 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: 0px;
+}
+
+/* Aside */
+aside {
+  background-color: #3e1900;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 50px 0px;
+  font-size: small;
+}
+
+.aside-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+
+/* Detalhes fundo colorido */
+.fundo-marrom {
+  width: 90%;
+  height: 240px;
+  background-color: #61381d;
+  position: absolute;
+  z-index: -1;
+  left: 10%;
+  top: 110px;
+}
+
+.fundo-cinza {
+  width: 90%;
+  height: 410px;
+  background-color: #f4f2f1;
+  position: absolute;
+  z-index: -1;
+  left: 10%;
+  top: 343px;
+}
