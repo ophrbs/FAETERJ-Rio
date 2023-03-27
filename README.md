@@ -36,3 +36,32 @@ tags semânticas; Estilização e Layout responsivo; Utilização de recursos mu
 Validação e manipulação de objetos HTML com Javascript; Utilização de efeitos de
 transição e animações; Folhas de estilo em cascata e padronização de recursos visuais para
 diferentes browsers
+
+<hr>
+
+## Estrutura de Dados (3ESD) - Terceiro Período;
+>Pré-Requisito: : Fundamentos de Programação (2FPR)
+
+Tipos Abstratos de Dados; Estruturas de Dados Lineares; Árvores; Pesquisa Digital; Análise
+de Complexidade de Algoritmos. 
+
+
+## Desenvolvimento de Tecnologias WEB (3DAW) - Terceiro Período;
+>Pré-Requisito : Construção de Aplicações WEB (2CAW)
+
+Criação e configurações de servidores WEB para construção de aplicações WEB.
+Administração e configuração de Dashboard web. Aplicação e configuração de CMS para
+construção de aplicações WEB. Desenvolvimento de front-end, Interfaces com HTML, PHP,
+JAVASCRIPT e CSS, Interação Humano-Computador para Desenvolvimento Front-end Web,
+utilização e configuração de Frameworks Front-end com Conexão com Back-end.
+
+## Programação Orientada a Objetos Básica (3POB) - Terceiro Período;
+>Pré-Requisito: : Fundamentos de Programação (2FPR)
+
+Paradigmas Procedural x Orientado a Objetos; Ambiente de Programação; Comandos
+Básicos; Visibilidade; Escopo das Variáveis; Conceitos da Orientação a Objetos e da
+Linguagem Java; Tratamento de Exceções; Erro de Compilação e Erro de Execução;
+Exceções checked e unchecked; Blocos (try, catch e finally); Cláusula throw; Cláusula
+throws; Coleções; Interfaces List, Set e Map; Classes ArrayList, LinkedList, HashSet,
+TreeSet, HashMap e Hashtable;Ordenação de coleções; For each; Iterator; Generics;
+enum; varags; Introdução as Anotações; Javadoc; Lambda; Method Reference.
