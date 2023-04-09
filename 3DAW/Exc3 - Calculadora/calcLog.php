@@ -16,52 +16,53 @@
     <!-- Operações Básicas -->
     <div class="part1">
       <form action="calcBasica.php" method="post">
-        <h3>Operações básicas:</h2>
-          Valor 1: <input name="x" type="text" size="2" required>
-          Valor 2: <input name="y" type="text" size="2" required>
-          Operação:
-          <select name="operacao">
-            <option value="+">Somar</option>
-            <option value="-">Subtrair</option>
-            <option value="*">Multiplcar</option>
-            <option value="/">Dividir</option>
-          </select>
-          <input type="submit" value="RESULTADO">
+        <h3>Operações básicas:</h3>
+        Valor 1: <input name="x" type="text" size="2" required>
+        Valor 2: <input name="y" type="text" size="2" required>
+        Operação:
+        <select name="operacao">
+          <option value="+">Somar</option>
+          <option value="-">Subtrair</option>
+          <option value="*">Multiplcar</option>
+          <option value="/">Dividir</option>
+        </select>
+        <input type="submit" value="RESULTADO">
       </form>
     </div>
 
     <!-- Razões trigonométricas -->
     <div class="part2">
       <form action="calcTrigonometrica.php" method="post">
-        <h3>Razões trigonométricas:</h2>
-          Valor: <input name="x" type="text" size="2" required>
-          Operação:
-          <select name="operacao">
-            <option value="seno">Seno</option>
-            <option value="coseno">Coseno</option>
-            <option value="tangente">Tangente</option>
-          </select>
-          <input type="submit" value="RESULTADO">
+        <h3>Razões trigonométricas:</h3>
+        Valor: <input name="x" type="text" size="2" required>
+        Operação:
+        <select name="operacao">
+          <option value="seno">Seno</option>
+          <option value="coseno">Coseno</option>
+          <option value="tangente">Tangente</option>
+        </select>
+        <input type="submit" value="RESULTADO">
       </form>
     </div>
 
     <!-- Operações adicionais -->
     <div class="part3">
       <h3>Operações adicionais</h3>
+
       <!-- Potenciação -->
       <form action="calcPotencia.php" method="post">
-        <h4>Potenciação:</h2>
-          Base: <input name="base" type="text" size="2">
-          Expoente: <input name="expoente" type="text" size="2">
-          <input type="submit" value="RESULTADO">
+        <h4>Potenciação:</h4>
+        Base: <input name="base" type="text" size="2">
+        Expoente: <input name="expoente" type="text" size="2">
+        <input type="submit" value="RESULTADO">
       </form>
 
       <!-- Logaritmo -->
       <form action="calcLog.php" method="post">
-        <h4>Logaritmo:</h2>
-          Valor: <input name="valor" type="text" size="2">
-          Base: <input name="baselog" type="text" size="2">
-          <input type="submit" value="RESULTADO">
+        <h4>Logaritmo:</h4>
+        Valor: <input name="valor" type="text" size="2">
+        Base: <input name="baselog" type="text" size="2">
+        <input type="submit" value="RESULTADO">
       </form>
       <br>
       <?php
@@ -75,9 +76,9 @@
 
       <form action="calcRaiz.php" method="post">
         <!-- Raiz quadrada -->
-        <h4>Raiz quadrada:</h2>
-          Valor: <input name="valor" type="text" size="2">
-          <input type="submit" value="RESULTADO">
+        <h4>Raiz quadrada:</h4>
+        Valor: <input name="valor" type="text" size="2">
+        <input type="submit" value="RESULTADO">
       </form>
     </div>
   </div>
