@@ -1,0 +1,10 @@
+1. Perguntas e Respostas múltipla escolha
+2. Perguntas e Respostas de texto
+
+3. Alterar Perguntas e respostas multipla escolha
+4. Alterar pergunta e resposta de texto
+
+5. Listar perguntas e respostas
+6. Listar uma pergunta
+
+7. Excluir pergunta e resposta
