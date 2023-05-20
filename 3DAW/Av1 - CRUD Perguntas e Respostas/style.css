@@ -1,0 +1,139 @@
+body {
+  font-family: "Lucida Sans", Arial, sans-serif;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a,
+.botao {
+  text-decoration: none;
+  color: white;
+  background-color: royalblue;
+  padding: 10px 20px;
+}
+
+.botao:hover {
+  cursor: pointer;
+  background-color: darkblue;
+}
+
+.botao-alterar {
+  background-color: #ffa500;
+}
+
+.botao-alterar:hover {
+  background-color: darkorange;
+  cursor: pointer;
+}
+
+.botao-excluir {
+  background-color: red;
+}
+
+.botao-excluir:hover {
+  background-color: #d8000c;
+  color: white;
+  cursor: pointer;
+}
+
+.nav h4 {
+  margin: 0;
+  align-self: center;
+}
+
+.titulo1 {
+  color: darkblue;
+  font-family: "Segoe UI", sans-serif;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+form {
+  display: grid;
+  justify-content: start;
+  justify-items: start;
+  gap: 10px;
+}
+
+form input {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 5px 15px;
+  border: 1px solid darkblue;
+}
+
+.div-opcoes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.label-opcao1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.input-opcao1 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.label-opcao2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.input-opcao2 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.label-opcao3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.input-opcao3 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+table {
+  border: 1px solid royalblue;
+  width: 800px;
+}
+
+table tr:nth-child(even) {
+  background-color: aliceblue;
+}
+
+tbody tr:first-child {
+  border-bottom: 1px solid black;
+}
+
+.td-botoes {
+  width: 20px;
+}
+
+input[type="number"] {
+  width: 6ch;
+}
+
+.formulario {
+  padding: 20px;
+  border: 1px solid royalblue;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.id-div {
+  padding-bottom: 10px;
+  border-bottom: 1px solid royalblue;
+  width: 100%;
+}

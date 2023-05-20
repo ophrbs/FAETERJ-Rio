@@ -58,42 +58,72 @@ if (isset($_POST['idMultipla'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>AV1 3DAW Leandro Herbas</title>
 </head>
 
 <body>
   <header>
-    <nav>
+    <nav class="nav">
       <a href="index.html">Início</a>
+      <a href="criarTexto.php">Criar Pergunta de Texto</a>
+      <a href="criarMultipla.php">Criar Pergunta de Multipla Escolha</a>
+      <a href="listarTodas.php">Listar Perguntas</a>
+      <a href="buscar.php">Buscar</a>
+      <h4>Para Alterar ou Excluir uma pergunta, acesse a Lista de Perguntas!</h4>
     </nav>
   </header>
+  <main>
+    <h1 class="titulo1">Exibindo Pergunta Buscada</h1>
+    <?php
+    if ($achou == 0) {
+      echo "ID não encontrada";
+    } else if ($achou == 1) {
+      ?>
+        <h3 class="subtitulo">Pergunta de Texto Encontrada</h3>
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>Pergunta</th>
+            <th>Resposta</th>
+          </tr>
+          <tr style="text-align: center">
 
-  <h1>Exibindo Pergunta Buscada</h1>
-  <?php
-  if ($achou == 0) {
-    echo "ID não encontrada";
-  } else if ($achou == 1) {
-    ?>
-      <table style="border: 1px solid black; width:800px;">
-        <tr>
-          <th style="padding: 10px 20px;">Perguntas e Respostas de Texto:</th>
-        </tr>
-        <tr>
-          <th>ID</th>
-          <th>Pergunta</th>
-          <th>Resposta</th>
-        </tr>
-        <tr style="text-align: center">
-          <?php
-          echo "<td>$idTexto</td>
-      <td>$perguntaTexto</td>
-      <td>$respostaTexto</td>
-    </tr>";
-  } else if ($achou == 2) { ?>
-            <table style="border: 1px solid black; width:800px;">
-              <tr>
-                <th style="padding: 10px 20px;">Pergunta e Resposta de Multipla Escolha:</th>
-              </tr>
+            <td>
+            <?php echo "$idTexto" ?>
+            </td>
+            <td>
+            <?php echo "$perguntaTexto" ?>
+            </td>
+            <td>
+            <?php echo "$respostaTexto" ?>
+            </td>
+            <?php
+            $perguntaTexto = urlencode($perguntaTexto);
+            $respostaTexto = urlencode($respostaTexto);
+            ?>
+            <td class="td-botoes">
+              <form action='alterarTexto.php' method='POST'>
+                <input type='hidden' name='idTexto' value=<?php echo "$idTexto"; ?>>
+                <input type='hidden' name='perguntaTexto' value=<?php echo "$perguntaTexto"; ?>>
+                <input type='hidden' name='respostaTexto' value=<?php echo "$respostaTexto"; ?>>
+                <input type='submit' value='Alterar' class="botao-alterar">
+              </form>
+            </td>
+            <td class="td-botoes">
+              <form action='excluir.php' method='POST'>
+                <input type='hidden' name='idTexto' value=<?php echo "$idTexto"; ?>>
+                <input type='hidden' name='perguntaTexto' value=<?php echo "$perguntaTexto"; ?>>
+                <input type='hidden' name='respostaTexto' value=<?php echo "$respostaTexto"; ?>>
+                <input type='submit' value='Excluir' class="botao-excluir">
+              </form>
+            </td>
+          </tr>
+
+        <?php
+    } else if ($achou == 2) { ?>
+            <h3 class="subitutlo">Pergunta de Múltipla Escolha Encontrada</h3>
+            <table>
               <tr>
                 <th>ID</th>
                 <th>Pergunta</th>
@@ -103,17 +133,57 @@ if (isset($_POST['idMultipla'])) {
                 <th>Resposta</th>
               </tr>
               <tr style="text-align: center">
+                <td>
+              <?php echo "$idMultipla"; ?>
+                </td>
+                <td>
+              <?php echo "$perguntaMultipla"; ?>
+                </td>
+                <td>
+              <?php echo "$opcao1"; ?>
+                </td>
+                <td>
+              <?php echo "$opcao2"; ?>
+                </td>
+                <td>
+              <?php echo "$opcao3"; ?>
+                </td>
+                <td>
+              <?php echo "$respostaMultipla"; ?>
+                </td>
               <?php
-              echo "<td>$idMultipla</td>
-      <td>$perguntaMultipla</td>
-      <td>$opcao1</td>
-      <td>$opcao2</td>
-      <td>$opcao3</td>
-      <td>$respostaMultipla</td>
-    </tr>";
+              $perguntaMultipla = urlencode($perguntaMultipla);
+              $opcao1 = urlencode($opcao1);
+              $opcao2 = urlencode($opcao2);
+              $opcao3 = urlencode($opcao3);
+              $respostaMultipla = urlencode($respostaMultipla);
               ?>
-          <?php } ?>
+                <td class="td-botoes">
+                  <form action='alterarMultipla.php' method='POST'>
+                    <input type='hidden' name='idMultipla' value=<?php echo "$idMultipla"; ?>>
+                    <input type='hidden' name='perguntaMultipla' value=<?php echo "$perguntaMultipla"; ?>>
+                    <input type='hidden' name='opcao1' value=<?php echo "$opcao1"; ?>>
+                    <input type='hidden' name='opcao2' value=<?php echo "$opcao2"; ?>>
+                    <input type='hidden' name='opcao3' value=<?php echo "$opcao3"; ?>>
+                    <input type='hidden' name='respostaMultipla' value=<?php echo "$respostaMultipla"; ?>>
+                    <input type='submit' value='Alterar' class='botao-alterar'>
+                  </form>
+                </td>
+                <td class="td-botoes">
+                  <form action='excluir.php' method='POST'>
+                    <input type='hidden' name='idMultipla' value=<?php echo "$idMultipla"; ?>>
+                    <input type='hidden' name='perguntaMultipla' value=<?php echo "$perguntaMultipla"; ?>>
+                    <input type='hidden' name='opcao1' value=<?php echo "$opcao1"; ?>>
+                    <input type='hidden' name='opcao2' value=<?php echo "$opcao2"; ?>>
+                    <input type='hidden' name='opcao3' value=<?php echo "$opcao3"; ?>>
+                    <input type='hidden' name='respostaMultipla' value=<?php echo "$respostaMultipla"; ?>>
+                    <input type='submit' value='Excluir' class='botao-excluir'>
+                  </form>
+                </td>
+              </tr>
+        <?php } ?>
       </table>
+  </main>
 </body>
 
 </html>

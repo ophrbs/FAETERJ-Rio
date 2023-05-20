@@ -5,17 +5,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>AV1 3DAW Leandro Herbas</title>
 </head>
 
 <body>
   <header>
-    <nav>
+    <nav class="nav">
       <a href="index.html">Início</a>
+      <a href="criarTexto.php">Criar Pergunta de Texto</a>
+      <a href="criarMultipla.php">Criar Pergunta de Multipla Escolha</a>
+      <a href="listarTodas.php">Listar Perguntas</a>
+      <a href="buscar.php">Buscar</a>
+      <h4>Para Alterar ou Excluir uma pergunta, acesse a Lista de Perguntas!</h4>
     </nav>
   </header>
   <main>
-    <h1>Excluir</h1>
+    <h1 class="titulo1">Excluir</h1>
     <?php
     //checar se as variaveis chegaram
     if (isset($_POST['idTexto']) && isset($_POST['perguntaTexto']) && isset($_POST['respostaTexto'])) {
