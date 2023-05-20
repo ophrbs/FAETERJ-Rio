@@ -141,6 +141,13 @@ if (file_exists($fileTexto)) {
           <input type='submit' value='Excluir'>
           </form>
           </td>
+          <td>
+          <form action='alterarTexto.php' method='POST'>
+          <input type='hidden' name='perguntaTexto' value=$perguntaTexto>
+          <input type='hidden' name='respostaTexto' value=$respostaTexto>
+          <input type='submit' value='Alterar'>
+          </form>
+          </td>
           </tr>";
           }
           ?>
