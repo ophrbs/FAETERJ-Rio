@@ -2,8 +2,10 @@
 $fileMultipla = "perguntaMultipla.txt";
 if (file_exists($fileMultipla)) {
   $perguntaMultpla = "";
-  $resposta1 = "";
-  $resposta2 = "";
+  $opcao1 = "";
+  $opcao2 = "";
+  $opcao3 = "";
+  $respostaMultipla = "";
   $arquivoMultiplaIn = fopen("perguntaMultipla.txt", "r");
   $linhas = fgets($arquivoMultiplaIn);
 }
@@ -42,7 +44,7 @@ if (file_exists($fileTexto)) {
       } else {
         ?>
 
-        <table style="border: 1px solid black; width:500px">
+        <table style="border: 1px solid black; width:800px">
           <tr>
             <th style="padding: 10px 0;">Perguntas e Respostas Múltipla Escolha:</th>
           </tr>
@@ -51,6 +53,7 @@ if (file_exists($fileTexto)) {
             <th>Opção 1</th>
             <th>Opção 2</th>
             <th>Opção 3</th>
+            <th>Resposta</th>
           </tr>
 
           <?php
@@ -58,17 +61,35 @@ if (file_exists($fileTexto)) {
             $linhas = fgets($arquivoMultiplaIn);
             $colunaDados = explode(";", $linhas);
 
-            if (isset($colunaDados[0]) && isset($colunaDados[1]) && isset($colunaDados[2]) && isset($colunaDados[3])) {
+            if (isset($colunaDados[0]) && isset($colunaDados[1]) && isset($colunaDados[2]) && isset($colunaDados[3]) && isset($colunaDados[4])) {
               $perguntaMultipla = $colunaDados[0];
-              $resposta1 = $colunaDados[1];
-              $resposta2 = $colunaDados[2];
-              $resposta3 = $colunaDados[3];
+              $opcao1 = $colunaDados[1];
+              $opcao2 = $colunaDados[2];
+              $opcao3 = $colunaDados[3];
+              $respostaMultipla = $colunaDados[4];
               echo "
           <tr style='text-align:center;'>
           <td>$perguntaMultipla</td>
-          <td>$resposta1</td>
-          <td>$resposta2</td>
-          <td>$resposta3</td>
+          <td>$opcao1</td>
+          <td>$opcao2</td>
+          <td>$opcao3</td>
+          <td>$respostaMultipla</td>";
+              $perguntaMultipla = urlencode($perguntaMultipla);
+              $opcao1 = urlencode($opcao1);
+              $opcao2 = urlencode($opcao2);
+              $opcao3 = urlencode($opcao3);
+              $respostaMultipla = urlencode($respostaMultipla);
+              echo "
+          <td>
+          <form action='excluir.php' method='POST'>
+          <input type='hidden' name='perguntaMultipla' value=$perguntaMultipla>
+          <input type='hidden' name='opcao1' value=$opcao1>
+          <input type='hidden' name='opcao2' value=$opcao2>
+          <input type='hidden' name='opcao3' value=$opcao3>
+          <input type='hidden' name='respostaMultipla' value=$respostaMultipla>
+          <input type='submit' value='Excluir'>
+          </form>
+          </td>
           </tr>";
             }
             ?>
@@ -89,7 +110,7 @@ if (file_exists($fileTexto)) {
     } else {
       ?>
 
-      <table style="border: 1px solid black; width:500px;">
+      <table style="border: 1px solid black; width:800px;">
         <tr>
           <th style="padding: 10px 20px;">Perguntas e Respostas de Texto:</th>
         </tr>

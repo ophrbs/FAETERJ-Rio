@@ -34,10 +34,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <h1>Criar Pergunta e Resposta de Texto:</h1>
   <form action="criarTexto.php" method="POST">
     <label for="pergunta">Pergunta:</label>
-    <input type="text" name="pergunta">
+    <input type="text" name="pergunta" required>
 
     <label for="resposta">Resposta:</label>
-    <input type="text" name="resposta">
+    <input type="text" name="resposta" required>
 
     <input type="submit" value="Enviar">
   </form>

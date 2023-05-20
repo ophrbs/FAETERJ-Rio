@@ -1,17 +1,18 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $pergunta = $_POST["pergunta"];
-  $resposta1 = $_POST["resposta1"];
-  $resposta2 = $_POST["resposta2"];
-  $resposta3 = $_POST["resposta3"];
+  $opcao1 = $_POST["opcao1"];
+  $opcao2 = $_POST["opcao2"];
+  $opcao3 = $_POST["opcao3"];
+  $respostaMultipla = $_POST["respostaMultipla"];
   if (!file_exists("perguntaMultipla.txt")) {
-    $cabecalho = "pergunta;resposta1;resposta2;resposta3;\n";
+    $cabecalho = "pergunta;opcao1;opcao2;opcao3;respostaMultipla\n";
     $arquivoMultipla = fopen("perguntaMultipla.txt", "w");
     fwrite($arquivoMultipla, $cabecalho);
     fclose($arquivoMultipla);
   }
   $arquivoMultipla = fopen("perguntaMultipla.txt", "a");
-  $txt = $pergunta . ";" . $resposta1 . ";" . $resposta2 . ";" . $resposta3 . "\n";
+  $txt = $pergunta . ";" . $opcao1 . ";" . $opcao2 . ";" . $opcao3 . ";" . $respostaMultipla . "\n";
   fwrite($arquivoMultipla, $txt);
   fclose($arquivoMultipla);
 }
@@ -36,15 +37,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <h1>Criar Pergunta e Resposta de Multipla Escolha:</h1>
   <form action="criarMultipla.php" method="POST">
     <label for="pergunta">Pergunta:</label>
-    <input type="text" name="pergunta">
+    <input type="text" name="pergunta" required>
 
     <h3>Opções de respostas:</h3>
-    <label for="resposta">Oppção 1:</label>
-    <input type="text" name="resposta1">
-    <label for="resposta">Oppção 2:</label>
-    <input type="text" name="resposta2">
-    <label for="resposta">Oppção 3:</label>
-    <input type="text" name="resposta3">
+    <label for="resposta">Opção 1:</label>
+    <input type="text" name="opcao1" required>
+    <label for="resposta">Opção 2:</label>
+    <input type="text" name="opcao2" required>
+    <label for="resposta">Opção 3:</label>
+    <input type="text" name="opcao3">
+    <label for="resposta">Resposta:</label>
+    <input type="text" name="respostaMultipla" required>
 
     <input type="submit" value="Enviar">
   </form>
