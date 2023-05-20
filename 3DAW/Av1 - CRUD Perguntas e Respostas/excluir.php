@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -18,13 +18,15 @@
     <h1>Excluir</h1>
     <?php
     //checar se as variaveis chegaram
-    if (isset($_POST['perguntaTexto']) && isset($_POST['respostaTexto'])) {
+    if (isset($_POST['idTexto']) && isset($_POST['perguntaTexto']) && isset($_POST['respostaTexto'])) {
+      $idTexto = $_POST['idTexto'];
       $pergunta = urldecode($_POST['perguntaTexto']);
       $resposta = urldecode($_POST["respostaTexto"]);
 
       $nomeArquivo = 'perguntaTexto.txt';
-      $variavelProcurada = "$pergunta;$resposta";
-    } else if (isset($_POST['perguntaMultipla']) && isset($_POST['opcao1']) && isset($_POST['opcao2']) && isset($_POST['opcao3']) && isset($_POST['respostaMultipla'])) {
+      $variavelProcurada = "$idTexto;$pergunta;$resposta";
+    } else if (isset($_POST['idMultipla']) && isset($_POST['perguntaMultipla']) && isset($_POST['opcao1']) && isset($_POST['opcao2']) && isset($_POST['opcao3']) && isset($_POST['respostaMultipla'])) {
+      $idMultipla = $_POST['idMultipla'];
       $pergunta = urldecode($_POST['perguntaMultipla']);
       $opcao1 = urldecode($_POST["opcao1"]);
       $opcao2 = urldecode($_POST["opcao2"]);
@@ -32,7 +34,7 @@
       $respostaMultipla = urldecode($_POST["respostaMultipla"]);
 
       $nomeArquivo = 'perguntaMultipla.txt';
-      $variavelProcurada = "$pergunta;$opcao1;$opcao2;$opcao3;$respostaMultipla";
+      $variavelProcurada = "$idMultipla;$pergunta;$opcao1;$opcao2;$opcao3;$respostaMultipla";
     }
 
     // Ler o conteúdo do arquivo para um array

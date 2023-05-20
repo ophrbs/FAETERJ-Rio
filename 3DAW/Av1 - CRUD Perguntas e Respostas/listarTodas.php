@@ -19,7 +19,7 @@ if (file_exists($fileTexto)) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -49,6 +49,7 @@ if (file_exists($fileTexto)) {
             <th style="padding: 10px 0;">Perguntas e Respostas Múltipla Escolha:</th>
           </tr>
           <tr>
+            <th>ID</th>
             <th>Pergunta</th>
             <th>Opção 1</th>
             <th>Opção 2</th>
@@ -61,14 +62,16 @@ if (file_exists($fileTexto)) {
             $linhas = fgets($arquivoMultiplaIn);
             $colunaDados = explode(";", $linhas);
 
-            if (isset($colunaDados[0]) && isset($colunaDados[1]) && isset($colunaDados[2]) && isset($colunaDados[3]) && isset($colunaDados[4])) {
-              $perguntaMultipla = $colunaDados[0];
-              $opcao1 = $colunaDados[1];
-              $opcao2 = $colunaDados[2];
-              $opcao3 = $colunaDados[3];
-              $respostaMultipla = $colunaDados[4];
+            if (isset($colunaDados[0]) && isset($colunaDados[1]) && isset($colunaDados[2]) && isset($colunaDados[3]) && isset($colunaDados[4]) && isset($colunaDados[5])) {
+              $idMultipla = $colunaDados[0];
+              $perguntaMultipla = $colunaDados[1];
+              $opcao1 = $colunaDados[2];
+              $opcao2 = $colunaDados[3];
+              $opcao3 = $colunaDados[4];
+              $respostaMultipla = $colunaDados[5];
               echo "
           <tr style='text-align:center;'>
+          <td>$idMultipla</td>
           <td>$perguntaMultipla</td>
           <td>$opcao1</td>
           <td>$opcao2</td>
@@ -82,6 +85,7 @@ if (file_exists($fileTexto)) {
               echo "
           <td>
           <form action='excluir.php' method='POST'>
+          <input type='hidden' name='idMultipla' value=$idMultipla>
           <input type='hidden' name='perguntaMultipla' value=$perguntaMultipla>
           <input type='hidden' name='opcao1' value=$opcao1>
           <input type='hidden' name='opcao2' value=$opcao2>
@@ -92,6 +96,7 @@ if (file_exists($fileTexto)) {
           </td>
           <td>
           <form action='alterarMultipla.php' method='POST'>
+          <input type='hidden' name='idMultipla' value=$idMultipla>
           <input type='hidden' name='perguntaMultipla' value=$perguntaMultipla>
           <input type='hidden' name='opcao1' value=$opcao1>
           <input type='hidden' name='opcao2' value=$opcao2>
@@ -125,6 +130,7 @@ if (file_exists($fileTexto)) {
           <th style="padding: 10px 20px;">Perguntas e Respostas de Texto:</th>
         </tr>
         <tr>
+          <th>ID</th>
           <th>Pergunta</th>
           <th>Resposta</th>
         </tr>
@@ -134,11 +140,13 @@ if (file_exists($fileTexto)) {
           $linhas = fgets($arquivoTextoIn);
           $colunaDados = explode(";", $linhas);
 
-          if (isset($colunaDados[0]) && isset($colunaDados[1])) {
-            $perguntaTexto = $colunaDados[0];
-            $respostaTexto = $colunaDados[1];
+          if (isset($colunaDados[0]) && isset($colunaDados[1]) && isset($colunaDados[2])) {
+            $idTexto = $colunaDados[0];
+            $perguntaTexto = $colunaDados[1];
+            $respostaTexto = $colunaDados[2];
             echo "
           <tr style='text-align:center;'>
+          <td>$idTexto</td>
           <td>$perguntaTexto</td>
           <td>$respostaTexto</td>";
             $perguntaTexto = urlencode($perguntaTexto);
@@ -146,6 +154,7 @@ if (file_exists($fileTexto)) {
             echo "
           <td>
           <form action='excluir.php' method='POST'>
+          <input type='hidden' name='idTexto' value=$idTexto>
           <input type='hidden' name='perguntaTexto' value=$perguntaTexto>
           <input type='hidden' name='respostaTexto' value=$respostaTexto>
           <input type='submit' value='Excluir'>
@@ -153,6 +162,7 @@ if (file_exists($fileTexto)) {
           </td>
           <td>
           <form action='alterarTexto.php' method='POST'>
+          <input type='hidden' name='idTexto' value=$idTexto>
           <input type='hidden' name='perguntaTexto' value=$perguntaTexto>
           <input type='hidden' name='respostaTexto' value=$respostaTexto>
           <input type='submit' value='Alterar'>
