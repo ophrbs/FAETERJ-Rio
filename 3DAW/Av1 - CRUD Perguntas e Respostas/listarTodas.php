@@ -90,6 +90,16 @@ if (file_exists($fileTexto)) {
           <input type='submit' value='Excluir'>
           </form>
           </td>
+          <td>
+          <form action='alterarMultipla.php' method='POST'>
+          <input type='hidden' name='perguntaMultipla' value=$perguntaMultipla>
+          <input type='hidden' name='opcao1' value=$opcao1>
+          <input type='hidden' name='opcao2' value=$opcao2>
+          <input type='hidden' name='opcao3' value=$opcao3>
+          <input type='hidden' name='respostaMultipla' value=$respostaMultipla>
+          <input type='submit' value='Alterar'>
+          </form>
+          </td>
           </tr>";
             }
             ?>
