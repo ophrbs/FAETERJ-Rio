@@ -6,7 +6,8 @@ public class Main {
 		Menu menu = new Menu();
 		Produto p1 = new Produto();
 		menu.exibir(p1);
-		System.out.println(p1.toString());
+		Produto p2 = new Produto();
+		menu.exibir(p2);
 	}
 
 }

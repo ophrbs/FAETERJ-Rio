@@ -4,9 +4,9 @@ import java.util.Scanner;
 public class Produto {
 	Scanner sc = new Scanner(System.in);
 	
-	public int id, codBarras, sku;
-	public double preco, peso;
-	public String nome, descricao, categoria, fabricante;
+	private int id, codBarras, sku;
+	private double preco, peso;
+	private String nome, descricao, categoria, fabricante;
 	
 	//CONSTRUCTOR
 	public Produto() {
