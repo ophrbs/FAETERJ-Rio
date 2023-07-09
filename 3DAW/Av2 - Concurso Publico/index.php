@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+
 <head>
-<title>av2 3daw</title>
+	<title>av2 3daw</title>
 </head>
+
 <body>
 	<header>
 		<nav>
@@ -9,30 +11,34 @@
 			<a href="?page=incluir_candidato">Incluir Candidato</a>
 			<a href="?page=incluir_fiscal">Incluir Fiscal</a>
 			<a href="?page=listar_candidatos">Listar Candidatos</a>
+			<a href="?page=listar_fiscais">Listar Fiscais</a>
 			<p>Para alterar a sala de um candidato, acesse a lista de candidatos</p>
 		</nav>
 	</header>
 	<main>
-	<?php
-	include("config.php");
-	switch(@$_REQUEST["page"]) {
-		case "incluir_candidato":
-			include("incluir_candidato.php");
-			break;
-		case "incluir_fiscal";
-			include("incluir_fiscal.php");
-			break;
-		case "alterar_sala";
-			include("alterar_sala.php");
-			break;
-		case "listar_candidatos";
-			include("listar_candidatos.php");
-			break;
-		case "salvar";
-			include("salvar.php");
-			break;
-		default:
-		print"
+		<?php
+		include("config.php");
+		switch (@$_REQUEST["page"]) {
+			case "incluir_candidato":
+				include("incluir_candidato.php");
+				break;
+			case "incluir_fiscal";
+				include("incluir_fiscal.php");
+				break;
+			case "alterar_sala";
+				include("alterar_sala.php");
+				break;
+			case "listar_candidatos";
+				include("listar_candidatos.php");
+				break;
+			case "listar_fiscais";
+				include("listar_fiscais.php");
+				break;
+			case "salvar";
+				include("salvar.php");
+				break;
+			default:
+				print "
 		<ol>
 		<li>Criar as funcionalidades de Listar candidatos em ordem de nome, por sala de prova, colocando 50 candidatos em cada sala. O candidato possui nome, cpf, identidade,
 		email, cargo pretendido e sala de prova.</1i>
@@ -41,8 +47,9 @@
 		<li>Os dados devem ser validados no Javascript e no php.</li>
 		<li>Os dados devem ser armazenados no banco de dados Mysql.</li>
 		</ol>";
-	}
-	?>
+		}
+		?>
 	</main>
 </body>
+
 </html>

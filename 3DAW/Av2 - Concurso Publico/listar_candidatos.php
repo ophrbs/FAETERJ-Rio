@@ -1,32 +1,52 @@
 <?php
-	$sql = "SELECT * FROM tabela_candidatos";
-	$res = $conn->query($sql);
-	$qtd = $res->num_rows;
-	
-	print "<h1>Tabela Candidatos</h1>";
-	if ($qtd > 0) {
-		print "<table>";
-		print "<tr>";
-		print "<th>Nome</th>";
-		print "<th>Sala</th>";
-		print "<th>CPF</th>";
-		print "<th>Identidade</th>";
-		print "<th>E-mail</th>";
-		print "<th>Cargo</th>";
-		print "</tr>";
-		while ($row = $res->fetch_object()) {
-			print "<tr>";
-			print "<td>" . $row->nome_candidato . "</td>";
-			print "<td>" . $row->sala_candidato . "</td>";
-			print "<td>" . $row->cpf_candidato . "</td>";
-			print "<td>" . $row->identidade_candidato . "</td>";
-			print "<td>" . $row->email_candidato . "</td>";
-			print "<td>" . $row->cargo_candidato . "</td>";
-			print "<td><button onclick=\"location.href='?page=editar_sala&id_sala=" . $row->id_sala . "';\">Editar Sala</button>";
-			print "</tr>";
-		}
-		print "</table>";
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+	$ordem = $_POST["ordem"];
+	if ($ordem == "nome") {
+		$sql = "SELECT * FROM tabela_candidatos ORDER BY nome_candidato";
 	} else {
-		print "<p>Não há candidatos registrados</p>";
+		$sql = "SELECT * FROM tabela_candidatos ORDER BY sala_candidato";
 	}
+} else {
+	$sql = "SELECT * FROM tabela_candidatos";
+}
+$res = $conn->query($sql);
+$qtd = $res->num_rows;
+?>
+<h1>Tabela de Candidatos</h1>
+<div>
+	<p>Organizar por:</p>
+	<form method="POST">
+		<input type="radio" id="ordem-nome" name="ordem" value="nome">
+		<label for="ordem-nome">Nome</label>
+		<input type="radio" id="ordem-sala" name="ordem" value="sala">
+		<label for="sala-nome">Sala</label>
+		<button type="submit">Atualizar</button>
+	</form>
+</div>
+<?php
+if ($qtd > 0) {
+	print "<table>";
+	print "<tr>";
+	print "<th>Nome</th>";
+	print "<th>CPF</th>";
+	print "<th>Identidade</th>";
+	print "<th>E-mail</th>";
+	print "<th>Cargo</th>";
+	print "<th>Sala</th>";
+	print "</tr>";
+	while ($row = $res->fetch_object()) {
+		print "<tr>";
+		print "<td>" . $row->nome_candidato . "</td>";
+		print "<td>" . $row->cpf_candidato . "</td>";
+		print "<td>" . $row->identidade_candidato . "</td>";
+		print "<td>" . $row->email_candidato . "</td>";
+		print "<td>" . $row->cargo_candidato . "</td>";
+		print "<td>" . $row->sala_candidato . "</td>";
+		print "<td><button onclick=\"location.href='?page=alterar_sala&id_candidato=" . $row->id_candidato . "';\">Alterar Sala</button>";
+		print "</tr>";
+	}
+	print "</table>";
+} else {
+	print "<p>Não há candidatos registrados</p>";
+}
 ?>
