@@ -1,0 +1,3 @@
+idAluno;nomeAluno;cpfAluno;
+1;André;111.147.158-99
+6;Leandro;234.456.789-91
