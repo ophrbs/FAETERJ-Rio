@@ -1,4 +1,5 @@
 <?php
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$ordem = $_POST["ordem"];
 	if ($ordem == "nome") {
@@ -13,26 +14,27 @@ $res = $conn->query($sql);
 $qtd = $res->num_rows;
 ?>
 <h1>Tabela de Candidatos</h1>
-<div>
+<div class="div-ordenar-tabela">
 	<p>Organizar por:</p>
 	<form method="POST">
-		<input type="radio" id="ordem-nome" name="ordem" value="nome">
+		<input type="radio" id="ordem-nome" name="ordem" value="nome" class="radio-input" required>
 		<label for="ordem-nome">Nome</label>
-		<input type="radio" id="ordem-sala" name="ordem" value="sala">
+		<input type="radio" id="ordem-sala" name="ordem" value="sala" class="radio-input">
 		<label for="sala-nome">Sala</label>
-		<button type="submit">Atualizar</button>
+		<button type="submit" class="btn-form">Atualizar</button>
 	</form>
 </div>
 <?php
 if ($qtd > 0) {
-	print "<table>";
-	print "<tr>";
+	print "<table class='tabela'>";
+	print "<tr class='tabela-titulo'>";
 	print "<th>Nome</th>";
 	print "<th>CPF</th>";
 	print "<th>Identidade</th>";
 	print "<th>E-mail</th>";
 	print "<th>Cargo</th>";
 	print "<th>Sala</th>";
+	print "<th>Ação</th>";
 	print "</tr>";
 	while ($row = $res->fetch_object()) {
 		print "<tr>";

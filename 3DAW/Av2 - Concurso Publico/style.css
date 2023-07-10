@@ -1,0 +1,154 @@
+* {
+  margin: 0px;
+}
+
+body {
+  background-color: #fce1a6;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  background-color: #ffa500;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav a {
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: #db6515;
+  color: white;
+}
+
+main {
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.tabela {
+  border: 1px solid #db6515;
+}
+
+.tabela td {
+  padding: 4px 8px;
+}
+
+.tabela tr:nth-child(even) {
+  background-color: #f1b673;
+}
+
+.tabela tr:nth-child(odd) {
+  background-color: #fdcd8f;
+}
+
+.tabela-titulo {
+  background-color: #db6515 !important;
+}
+
+.div-ordenar-tabela {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0px;
+}
+
+.tabela-fiscal {
+  margin-top: 20px;
+}
+
+table button {
+  background-color: #ffa500;
+  color: #573016;
+  border: 1px solid #573016;
+}
+
+table button:hover {
+  background-color: #573016;
+  color: #ffa500;
+  border: 1px solid #ffa500;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.btn-form {
+  background-color: #db6515;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+}
+
+.btn-form:hover {
+  cursor: pointer;
+  background-color: #995121;
+  transition: 0.3s;
+}
+
+.form-incluir {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 800px;
+  gap: 10px;
+  background-color: #f1b673;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: 1px solid #db6515;
+}
+
+.div-form-incluir {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-incluir button {
+  grid-column: 1 / -1;
+  width: 200px;
+  justify-self: center;
+}
+
+input {
+  border: none;
+  background-color: #fce1a6;
+  padding: 5px;
+}
+
+input:focus {
+  outline: 1px solid #db6515;
+}
+
+input::placeholder {
+  color: #8b7c5c;
+}
+
+.form-fiscal {
+  width: 400px;
+  gap: 5px;
+  background-color: #f1b673;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+  border: 1px solid #db6515;
+}
+
+.form-fiscal input {
+  max-width: 200px;
+}
+
+.form-fiscal-btn {
+  width: 100px;
+}
+
+.input-sala {
+  border: 2px solid #db6515;
+}
+
+.input-alterar {
+  color: #db6515;
+}
+
+.radio-input:focus {
+  outline: none;
+}

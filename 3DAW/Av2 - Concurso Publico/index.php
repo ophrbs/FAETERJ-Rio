@@ -2,6 +2,7 @@
 
 <head>
 	<title>av2 3daw</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -39,6 +40,7 @@
 				break;
 			default:
 				print "
+				<h1> AV2 3DAW </h1>
 		<ol>
 		<li>Criar as funcionalidades de Listar candidatos em ordem de nome, por sala de prova, colocando 50 candidatos em cada sala. O candidato possui nome, cpf, identidade,
 		email, cargo pretendido e sala de prova.</1i>

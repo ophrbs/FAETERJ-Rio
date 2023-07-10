@@ -5,8 +5,8 @@ $qtd = $res->num_rows;
 
 print "<h1>Tabela de Fiscais por Sala</h1>";
 if ($qtd > 0) {
-  print "<table>";
-  print "<tr>";
+  print "<table class='tabela tabela-fiscal'>";
+  print "<tr class='tabela-titulo'>";
   print "<th>Nome</th>";
   print "<th>CPF</th>";
   print "<th>Sala</th>";
