@@ -1,14 +1,12 @@
 package Albergue;
 
-import java.util.Calendar;
 public class Cliente {
     int id;
-    String nome, endereco, postalCode, pais, cpf, passaporte, email;
-    Calendar dataNasc;
+    String nome, endereco, postalCode, pais, cpf, passaporte, email, dataNasc;
 
-}
     //CONSTRUCTOR
-    public Cliente(int id, String nome, String endereco, String postalCode, String pais, String cpf, String passaporte, String email, Calendar dataNasc) {
+    public Cliente() {}
+    public Cliente(int id, String nome, String endereco, String postalCode, String pais, String cpf, String passaporte, String email, String dataNasc) {
         this.id = id;
         this.nome = nome;
         this.endereco = endereco;
@@ -85,11 +83,11 @@ public class Cliente {
         this.email = email;
     }
 
-    public Calendar getDataNasc() {
+    public String getDataNasc() {
         return dataNasc;
     }
 
-    public void setData(Calendar dataNasc) {
+    public void setData(String dataNasc) {
         this.dataNasc = dataNasc;
     }
 }

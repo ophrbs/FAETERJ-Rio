@@ -6,13 +6,12 @@ public class Quarto {
     Boolean temBanheiro;
 
     //CONSTRUCTOR
-    public Quarto(int id, int qtdeCamas, int qtdeVagas, String nomeQuarto, String descricao, Boolean temBanheiro) {
+    public Quarto(int id, int qtdeCamas, int qtdeVagas, String nomeQuarto, String descricao) {
         this.id = id;
         this.qtdeCamas = qtdeCamas;
-        this.qtdeCamas = qtdeCamas;
+        this.qtdeVagas = qtdeVagas;
         this.nomeQuarto = nomeQuarto;
         this.descricao = descricao;
-        this.temBanheiro = temBanheiro;
     }
 
     //GETTER AND SETTER

@@ -6,19 +6,18 @@ public class Cama {
     String posicao, descricao;
 
     //CONSTRUCTOR
-    public Cama(int id, int codigoCama, Boolean ehBeliche, String posicao, String descricao) {
+    public Cama(int id, int codigoCama, Boolean ehBeliche, String posicao) {
         this.id = id;
         this.codigoCama = codigoCama;
         this.ehBeliche = ehBeliche;
         this.posicao = posicao;
-        this.descricao = descricao;
 
         if(posicao.equals("perto da janela")){
-            System.out.println("O quarto pega sol de manhã!");
+            this.setDescricao("O quarto pega sol de manhã!");
         } else if ((posicao.equals("perto da janela")) && ehBeliche){
-            System.out.println("O quarto pega sol na cama de baixo!");
+            this.setDescricao("O quarto pega sol na cama de baixo!");
         } else {
-            System.out.println("O quarto é protegido do sol");
+            this.setDescricao("O quarto é protegido do sol!");
         }
     }
 
@@ -53,6 +52,14 @@ public class Cama {
 
     public void setPosicao(String posicao) {
         this.posicao = posicao;
+
+        if(posicao.equals("perto da janela")){
+            this.setDescricao("O quarto pega sol de manhã!");
+        } else if ((posicao.equals("perto da janela")) && ehBeliche){
+            this.setDescricao("O quarto pega sol na cama de baixo!");
+        } else {
+            this.setDescricao("O quarto é protegido do sol!");
+        }
     }
 
     public String getDescricao() {

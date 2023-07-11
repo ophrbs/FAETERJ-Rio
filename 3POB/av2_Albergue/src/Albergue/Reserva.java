@@ -1,13 +1,11 @@
 package Albergue;
 
-import java.util.Calendar;
-
 public class Reserva {
     int id, idQuarto, idCama, idCliente;
-    Calendar dataEntrada, dataSaida;
+    String dataEntrada, dataSaida;
 
     //CONSTRUCTOR
-    public Reserva(int id, int idQuarto, int idCama, int idCliente, Calendar dataEntrada, Calendar dataSaida) {
+    public Reserva(int id, int idQuarto, int idCama, int idCliente, String dataEntrada, String dataSaida) {
         this.id = id;
         this.idQuarto = idQuarto;
         this.idCama = idCama;
@@ -48,19 +46,19 @@ public class Reserva {
         this.idCliente = idCliente;
     }
 
-    public Calendar getDataEntrada() {
+    public String getDataEntrada() {
         return dataEntrada;
     }
 
-    public void setDataEntrada(Calendar dataEntrada) {
+    public void setDataEntrada(String dataEntrada) {
         this.dataEntrada = dataEntrada;
     }
 
-    public Calendar getDataSaida() {
+    public String getDataSaida() {
         return dataSaida;
     }
 
-    public void setDataSaida(Calendar dataSaida) {
+    public void setDataSaida(String dataSaida) {
         this.dataSaida = dataSaida;
     }
 }
