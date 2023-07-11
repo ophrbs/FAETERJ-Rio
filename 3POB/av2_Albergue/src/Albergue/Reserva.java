@@ -61,4 +61,16 @@ public class Reserva {
     public void setDataSaida(String dataSaida) {
         this.dataSaida = dataSaida;
     }
+
+    @Override
+    public String toString() {
+        return "Reserva{" +
+                "id=" + id +
+                ", idQuarto=" + idQuarto +
+                ", idCama=" + idCama +
+                ", idCliente=" + idCliente +
+                ", dataEntrada='" + dataEntrada + '\'' +
+                ", dataSaida='" + dataSaida + '\'' +
+                '}';
+    }
 }

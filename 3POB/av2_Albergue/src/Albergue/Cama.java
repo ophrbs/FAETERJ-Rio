@@ -69,4 +69,15 @@ public class Cama {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    @Override
+    public String toString() {
+        return "Cama{" +
+                "id=" + id +
+                ", codigoCama=" + codigoCama +
+                ", ehBeliche=" + ehBeliche +
+                ", posicao='" + posicao + '\'' +
+                ", descricao='" + descricao + '\'' +
+                '}';
+    }
 }

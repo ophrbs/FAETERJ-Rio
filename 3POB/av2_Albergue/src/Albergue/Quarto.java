@@ -68,4 +68,16 @@ public class Quarto {
     public void setTemBanheiro(Boolean temBanheiro) {
         this.temBanheiro = temBanheiro;
     }
+
+    @Override
+    public String toString() {
+        return "Quarto{" +
+                "id=" + id +
+                ", qtdeCamas=" + qtdeCamas +
+                ", qtdeVagas=" + qtdeVagas +
+                ", nomeQuarto='" + nomeQuarto + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", temBanheiro=" + temBanheiro +
+                '}';
+    }
 }

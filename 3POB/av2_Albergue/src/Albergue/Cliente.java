@@ -90,4 +90,19 @@ public class Cliente {
     public void setData(String dataNasc) {
         this.dataNasc = dataNasc;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", endereco='" + endereco + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                ", pais='" + pais + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", passaporte='" + passaporte + '\'' +
+                ", email='" + email + '\'' +
+                ", dataNasc='" + dataNasc + '\'' +
+                '}';
+    }
 }

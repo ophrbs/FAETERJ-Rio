@@ -16,7 +16,7 @@ public class Sistema {
             System.out.println("2 - Quarto");
             System.out.println("3 - Cama");
             System.out.println("4 - Reserva");
-            System.out.println("0 - Finalizar programa");
+            System.out.println("99 - Finalizar programa");
 
             opcao = sc.nextInt();
 
@@ -28,7 +28,7 @@ public class Sistema {
                         System.out.println("2 - Alterar Cliente");
                         System.out.println("3 - Excluir Ciente");
                         System.out.println("4 - Listar Clientes");
-                        System.out.println("0 - Finalizar programa");
+                        System.out.println("0 - Voltar");
 
                         opcao = sc.nextInt();
 
@@ -62,7 +62,7 @@ public class Sistema {
                         System.out.println("2 - Alterar Quarto");
                         System.out.println("3 - Excluir Quarto");
                         System.out.println("4 - Listar Quarto");
-                        System.out.println("0 - Finalizar programa");
+                        System.out.println("0 - Voltar");
 
                         opcao = sc.nextInt();
 
@@ -96,7 +96,7 @@ public class Sistema {
                         System.out.println("2 - Alterar Cama");
                         System.out.println("3 - Excluir Cama");
                         System.out.println("4 - Listar Cama");
-                        System.out.println("0 - Finalizar programa");
+                        System.out.println("0 - Voltar");
 
                         opcao = sc.nextInt();
 
@@ -129,7 +129,7 @@ public class Sistema {
                         System.out.println("2 - Alterar Reserva");
                         System.out.println("3 - Excluir Reserva");
                         System.out.println("4 - Listar Reservas");
-                        System.out.println("0 - Finalizar programa");
+                        System.out.println("0 - Voltar");
 
                         opcao = sc.nextInt();
 
@@ -155,14 +155,14 @@ public class Sistema {
                     } while (opcao != 0);
                     break;
 
-                case 0: System.out.println("Programa Finalizado");
+                case 99: System.out.println("Programa Finalizado");
                     break;
 
                 default: System.out.println("Opcao invalida");
                     break;
             }
 
-        } while (opcao != 0);
+        } while (opcao != 99);
     }
 
     //CRUD CLIENTE
@@ -172,6 +172,7 @@ public class Sistema {
 
         System.out.println("Insira a ID do cliente:");
         id = sc.nextInt();
+        sc.nextLine(); //limpar o buffer
 
         for (int i = 0; i < listaClientes.size(); i++) {
             if (listaClientes.get(i).getId() == id) {
@@ -181,21 +182,21 @@ public class Sistema {
         }
 
         System.out.println("Insira o nome:");
-        nome = sc.next();
+        nome = sc.nextLine();
         System.out.println("Insira o endereço:");
-        endereco = sc.next();
+        endereco = sc.nextLine();
         System.out.println("Insira o código postal:");
-        postalCode = sc.next();
+        postalCode = sc.nextLine();
         System.out.println("Insira o pais:");
-        pais = sc.next();
+        pais = sc.nextLine();
         System.out.println("Insira o cpf:");
-        cpf = sc.next();
+        cpf = sc.nextLine();
         System.out.println("Insira passaporte:");
-        passaporte = sc.next();
+        passaporte = sc.nextLine();
         System.out.println("Insira email:");
-        email = sc.next();
+        email = sc.nextLine();
         System.out.println("Insira a data de nascimento:");
-        dataNasc = sc.next();
+        dataNasc = sc.nextLine();
 
         Cliente c = new Cliente(id, nome, endereco, postalCode, pais, cpf, passaporte, email, dataNasc);
 
@@ -209,6 +210,7 @@ public class Sistema {
 
         System.out.println("Insira a ID do cliente a ser alterado:");
         id = sc.nextInt();
+        sc.nextLine(); //limpar o buffer
 
         for (int i = 0; i < listaClientes.size(); i++) {
             if (listaClientes.get(i).getId() == id) {
@@ -221,13 +223,14 @@ public class Sistema {
             return;
         } else {
             System.out.println("Insira a opção a ser alterada:");
-            System.out.println("1-Nome\n2-Endereço\n3-Codigo Postal\n4-Pais\n5-CPF\n6-Passaporte-\n7-Email\n8-Data de Nascimento");
+            System.out.println("1-Nome\n2-Endereço\n3-Codigo Postal\n4-Pais\n5-CPF\n6-Passaporte\n7-Email\n8-Data de Nascimento");
             opc = sc.nextInt();
+            sc.nextLine(); //limpar o buffer
 
             switch(opc) {
                 case 1:
                     System.out.println("Insira o novo nome:");
-                    novo = sc.next();
+                    novo = sc.nextLine();
                     for (int i = 0; i < listaClientes.size(); i++) {
                         if (listaClientes.get(i).getId() == id) {
                             listaClientes.get(i).setNome(novo);
@@ -238,7 +241,7 @@ public class Sistema {
 
                 case 2:
                     System.out.println("Insira o novo endereco:");
-                    novo = sc.next();
+                    novo = sc.nextLine();
                     for (int i = 0; i < listaClientes.size(); i++) {
                         if (listaClientes.get(i).getId() == id) {
                             listaClientes.get(i).setEndereco(novo);
@@ -249,7 +252,7 @@ public class Sistema {
 
                 case 3:
                     System.out.println("Insira o novo Codigo Postal:");
-                    novo = sc.next();
+                    novo = sc.nextLine();
                     for (int i = 0; i < listaClientes.size(); i++) {
                         if (listaClientes.get(i).getId() == id) {
                             listaClientes.get(i).setPostalCode(novo);
@@ -260,7 +263,7 @@ public class Sistema {
 
                 case 4:
                     System.out.println("Insira o novo Pais:");
-                    novo = sc.next();
+                    novo = sc.nextLine();
                     for (int i = 0; i < listaClientes.size(); i++) {
                         if (listaClientes.get(i).getId() == id) {
                             listaClientes.get(i).setPais(novo);
@@ -271,7 +274,7 @@ public class Sistema {
 
                 case 5:
                     System.out.println("Insira o novo CPF:");
-                    novo = sc.next();
+                    novo = sc.nextLine();
                     for (int i = 0; i < listaClientes.size(); i++) {
                         if (listaClientes.get(i).getId() == id) {
                             listaClientes.get(i).setCpf(novo);
@@ -282,7 +285,7 @@ public class Sistema {
 
                 case 6:
                     System.out.println("Insira o novo Passaporte:");
-                    novo = sc.next();
+                    novo = sc.nextLine();
                     for (int i = 0; i < listaClientes.size(); i++) {
                         if (listaClientes.get(i).getId() == id) {
                             listaClientes.get(i).setPassaporte(novo);
@@ -293,7 +296,7 @@ public class Sistema {
 
                 case 7:
                     System.out.println("Insira o novo Email:");
-                    novo = sc.next();
+                    novo = sc.nextLine();
                     for (int i = 0; i < listaClientes.size(); i++) {
                         if (listaClientes.get(i).getId() == id) {
                             listaClientes.get(i).setEmail(novo);
@@ -304,7 +307,7 @@ public class Sistema {
 
                 case 8:
                     System.out.println("Insira a nova Data de Nascimento:");
-                    novo = sc.next();
+                    novo = sc.nextLine();
                     for (int i = 0; i < listaClientes.size(); i++) {
                         if (listaClientes.get(i).getId() == id) {
                             listaClientes.get(i).setData(novo);
@@ -337,7 +340,7 @@ public class Sistema {
 
     public void listarClientes() {
         for (int i = 0; i < listaClientes.size(); i++) {
-            System.out.println(listaClientes.get(i));
+            System.out.println(listaClientes.get(i).toString());
 
         }
     }
@@ -349,6 +352,7 @@ public class Sistema {
 
         System.out.println("Insira a ID do quarto:");
         id = sc.nextInt();
+        sc.nextLine(); //limpar o buffer
 
         for (int i = 0; i < listaQuartos.size(); i++) {
             if (listaQuartos.get(i).getId() == id) {
@@ -361,10 +365,11 @@ public class Sistema {
         qtdeCamas = sc.nextInt();
         System.out.println("Insira a quantidade de vagas:");
         qtdeVagas = sc.nextInt();
+        sc.nextLine(); //limpar o buffer
         System.out.println("Insira o nome do quarto:");
-        nomeQuarto = sc.next();
+        nomeQuarto = sc.nextLine();
         System.out.println("Insira a descrição:");
-        descricao = sc.next();
+        descricao = sc.nextLine();
 
         Quarto q = new Quarto(id, qtdeCamas, qtdeVagas, nomeQuarto, descricao);
 
@@ -392,6 +397,7 @@ public class Sistema {
             System.out.println("Insira a opção a ser alterada:");
             System.out.println("1-Quant. Camas\n2-Quant. Vagas\n3-Nome\n4-Descrição");
             opc = sc.nextInt();
+            sc.nextLine(); //limpar o buffer
 
             switch(opc) {
                 case 1:
@@ -418,7 +424,7 @@ public class Sistema {
 
                 case 3:
                     System.out.println("Insira o novo nome:");
-                    novaString = sc.next();
+                    novaString = sc.nextLine();
                     for (int i = 0; i < listaQuartos.size(); i++) {
                         if (listaQuartos.get(i).getId() == id) {
                             listaQuartos.get(i).setNomeQuarto(novaString);
@@ -429,7 +435,7 @@ public class Sistema {
 
                 case 4:
                     System.out.println("Insira a nova Descrição:");
-                    novaString = sc.next();
+                    novaString = sc.nextLine();
                     for (int i = 0; i < listaQuartos.size(); i++) {
                         if (listaQuartos.get(i).getId() == id) {
                             listaQuartos.get(i).setDescricao(novaString);
@@ -462,7 +468,7 @@ public class Sistema {
 
     public void listarQuartos() {
         for (int i = 0; i < listaQuartos.size(); i++) {
-            System.out.println(listaQuartos.get(i));
+            System.out.println(listaQuartos.get(i).toString());
         }
     }
 
@@ -484,8 +490,9 @@ public class Sistema {
 
         System.out.println("Insira o codigo da cama");
         codigoCama = sc.nextInt();
+        sc.nextLine(); //limpar o buffer
         System.out.println("Insira a posicao da cama (perto da janela, perto da porta, etc):");
-        posicao = sc.next();
+        posicao = sc.nextLine();
         System.out.println("É beliche? (true/false):");
         ehBeliche = sc.nextBoolean();
 
@@ -516,6 +523,7 @@ public class Sistema {
             System.out.println("Insira a opção a ser alterada:");
             System.out.println("1-Código da Cama\n2-Posição\n3-Beliche");
             opc = sc.nextInt();
+            sc.nextLine(); //limpar o buffer
 
             switch(opc) {
                 case 1:
@@ -531,7 +539,7 @@ public class Sistema {
 
                 case 2:
                     System.out.println("Insira a nova posição da cama:");
-                    posicao = sc.next();
+                    posicao = sc.nextLine();
                     for (int i = 0; i < listaCamas.size(); i++) {
                         if (listaCamas.get(i).getId() == id) {
                             listaCamas.get(i).setPosicao(posicao);
@@ -575,7 +583,7 @@ public class Sistema {
 
     public void listarCamas() {
         for (int i = 0; i < listaCamas.size(); i++) {
-            System.out.println(listaCamas.get(i));
+            System.out.println(listaCamas.get(i).toString());
         }
     }
 
@@ -600,10 +608,11 @@ public class Sistema {
         idCama = sc.nextInt();
         System.out.println("Insira o id do Cliente:");
         idCliente = sc.nextInt();
+        sc.nextLine(); //limpar o buffer
         System.out.println("Insira a data de entrada (DD/MM/YYYY):");
-        dataEntrada = sc.next();
+        dataEntrada = sc.nextLine();
         System.out.println("Insira a data de saida (DD/MM/YYYY):");
-        dataSaida = sc.next();
+        dataSaida = sc.nextLine();
 
         Reserva r = new Reserva(id, idQuarto, idCama, idCliente, dataEntrada, dataSaida);
 
@@ -631,6 +640,7 @@ public class Sistema {
             System.out.println("Insira a opção a ser alterada:");
             System.out.println("1-ID do Quarto\n2-ID da Cama\n3-ID do Cliente\n4-Data de Entrada\n5-Data de Saida");
             opc = sc.nextInt();
+            sc.nextLine(); //limpar o buffer
 
             switch(opc) {
                 case 1:
@@ -668,7 +678,7 @@ public class Sistema {
 
                 case 4:
                     System.out.println("Insira a nova Data de Entrada:");
-                    dataEntrada = sc.next();
+                    dataEntrada = sc.nextLine();
                     for (int i = 0; i < listaReservas.size(); i++) {
                         if (listaReservas.get(i).getId() == id) {
                             listaReservas.get(i).setDataEntrada(dataEntrada);
@@ -679,7 +689,7 @@ public class Sistema {
 
                 case 5:
                     System.out.println("Insira a nova Data de Saida:");
-                    dataSaida = sc.next();
+                    dataSaida = sc.nextLine();
                     for (int i = 0; i < listaReservas.size(); i++) {
                         if (listaReservas.get(i).getId() == id) {
                             listaReservas.get(i).setDataSaida(dataSaida);
@@ -712,7 +722,7 @@ public class Sistema {
 
     public void listarReservas() {
         for (int i = 0; i < listaReservas.size(); i++) {
-            System.out.println(listaReservas.get(i));
+            System.out.println(listaReservas.get(i).toString());
         }
     }
 }
