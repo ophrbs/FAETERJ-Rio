@@ -1,0 +1,7 @@
+CodigoPedido;DataPedido;SKU;UPC;NomeProduto;QTD;Valor;Frete;Email;NomeComprador;Endereco;UF;Pais;CEP
+1;2024-03-08;1234;02345612341;Mouse Razer;2;230.00;29.90;pedro@email.com;Pedro Alves;Rua Azul, 157;RJ;Brasil;20108-190
+2;2024-03-12;1322;02345613221;Teclado Havit;1;315.00;13.00;leo@email.com;Leonardo dos Santos;Rua Verde, 101;RJ;Brasil;20109-190
+3;2024-04-01;1333;02345613331;Mouse Logitech;2;190.00;14.50;leandro@email.com;Leandro Pessoa;Rua Vermelha, 777;RJ;Brasil;20110-190
+4;2024-04-02;2314;02345623141;Monitor LG;2;400.00;00.00;maria@email.com;Maria Ana;Rua Amarela, 12;RJ;Brasil;20111-190
+5;2024-04-03;4132;02345641321;Teclado Positivo;1;60.00;10.00;pericles@email.com;Pericles Exalta;Avenida Vermelha, 666;RJ;Brasil;20112-190
+6;2024-04-06;4422;02345644221;Headset Logitech;3;390.00;13.00;thiago@email.com;Thiago Silva;Rua Cinza, 909;RJ;Brasil;20113-190
