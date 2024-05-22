@@ -75,5 +75,13 @@ CREATE TABLE ItensPedido (
 -- Criar tabela 'PedidosOrdenados'
 CREATE TABLE PedidosOrdenados (
     order_id VARCHAR(50),
-    total_order_value DECIMAL(10,2)
+    total_order_value DECIMAL(10,2),
+    disponibilidade BIT,
+    FOREIGN KEY (order_id) REFERENCES Pedidos(order_id)
+);
+
+-- Criar tabela 'Estoque'
+CREATE TABLE Estoque (
+	sku VARCHAR(50),
+	quantity INT,
 );
