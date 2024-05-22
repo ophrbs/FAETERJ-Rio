@@ -33,5 +33,35 @@ ON ItensPedido.sku = Produtos.sku
 GROUP BY ItensPedido.order_id
 ORDER BY total_order_value DESC;
 
+-- Alterar Disponibilidade
+UPDATE PedidosOrdenados
+SET Disponibilidade = CASE
+    WHEN (
+        SELECT MIN(CASE
+            WHEN Estoque.quantity >= ItensPedido.total_quantity_purchased THEN 1
+            ELSE 0
+        END)
+        FROM (
+            SELECT order_id, sku, SUM(quantity_purchased) AS total_quantity_purchased
+            FROM ItensPedido
+            GROUP BY order_id, sku
+        ) AS ItensPedido
+        JOIN Estoque ON ItensPedido.sku = Estoque.sku
+        WHERE ItensPedido.order_id = PedidosOrdenados.order_id
+    ) = 1 THEN 1
+    ELSE 0
+END;
+
 -- Limpar tabela carga_temp
 DELETE FROM carga_temp;
+
+-- Atualizar Estoque
+UPDATE Estoque
+SET quantity = quantity - subquery.total_quantity_purchased
+FROM (
+    SELECT sku, SUM(quantity_purchased) AS total_quantity_purchased
+    FROM ItensPedido
+    WHERE order_id IN (SELECT order_id FROM Pedidos)
+    GROUP BY sku
+) AS subquery
+WHERE Estoque.sku = subquery.sku;
